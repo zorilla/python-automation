@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 #
+# Example demonstrating use of SSHExpect and SerialExpect
+#
 # mdeacon@zorillaeng.com
 #
 
@@ -56,6 +58,7 @@ def example(args):
     """
     #serial_expect_example(args)
     ssh_expect_example(args)
+    serial_expect_example(args)
 
 def main(argv=None):
     # Do argv default this way, as doing it in the functional
