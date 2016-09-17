@@ -84,7 +84,7 @@ def main(argv=None):
     # Custom parameters
     parser.add_argument("-a", "--ip_eth0", help="IP address for eth0")
     parser.add_argument("-u", "--username", help="Username")
-    parser.add_argument("-p", "--password", help="Username")
+    parser.add_argument("-p", "--password", help="Password")
     args = parser.parse_args(remaining_argv)
 
     # Set up logging
