@@ -5,10 +5,10 @@ This is a python module that provides control of network hosts and serial device
 
 This module also illustrates:
 
-How to setup and create a python package on both Windows and Linux
-How to implement a configuration file that matches command line parameters
-Automatic creation of default configuration on first run in the users home directory
-How to implement a logging system
+*How to setup and create a python package on both Windows and Linux
+*How to implement a configuration file that matches command line parameters
+*Automatic creation of default configuration on first run in the users home directory
+*How to implement a logging system
 
 Libraries
 
