@@ -21,3 +21,4 @@ Scripts
 * package.bat - Create/install the zorilla package for Windows
 * package.sh - Create/install the zorilla package for Linux
 * example.py - Example script
+* backtrace.py - Run gdb backtrace on a running process including tasks
