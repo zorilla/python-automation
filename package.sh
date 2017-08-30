@@ -19,6 +19,7 @@ cp -av python/MANIFEST.in package
 cp -av python/README.rst package
 cp -av python/config.py package/zorilla
 cp -av python/example.py package/zorilla
+cp -av python/backtrace.py package/zorilla
 cp -av python/host.py package/zorilla
 cp -av python/serial_expect.py package/zorilla
 cp -av python/ssh_expect.py package/zorilla

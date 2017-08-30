@@ -18,6 +18,7 @@ copy /Y python\setup.py package
 
 copy /Y python\config.py package\zorilla
 copy /Y python\example.py package\zorilla
+copy /Y python\backtrace.py package\zorilla
 copy /Y python\host.py package\zorilla
 copy /Y python\serial_expect.py package\zorilla
 copy /Y python\ssh_expect.py package\zorilla
