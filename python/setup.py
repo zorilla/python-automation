@@ -116,7 +116,8 @@ setup(
     #data_files=[('my_data', ['data/data_file'])],
     data_files=[],
 
-    scripts=['zorilla/example.py'],
+    scripts=['zorilla/example.py',
+             'zorilla/backtrace.py'],
 
     # To provide executable scripts, use entry points in preference to the
     # "scripts" keyword. Entry points provide cross-platform support and allow
