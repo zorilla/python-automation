@@ -62,14 +62,15 @@ class SSHExpect:
             for r in resp:
                 if r in output:
                     logger.debug('recv: match resp: [%s]' % r)
-                    return i
+                    return i, output
                 i += 1
         logger.error(output)
         raise SSHExpectException('recv: no match')
 
-    def send_recv(self, cmd, resp=[]):
+    def send_recv(self, cmd, resp=[], timeout=10):
         """Combine send and receive in a single call
         """
+        self.channel.settimeout(timeout)
         logger.debug('send_recv: cmd [%s]' % cmd)
         logger.debug('send_recv: resp [%r]', resp)
         self.send(cmd)
@@ -78,5 +79,10 @@ class SSHExpect:
     def close(self):
         """Close the channel and SSH client
         """
+        if self.channel.exit_status_ready():
+            rc = self.channel.recv_exit_status()
+            logger.debug('channel.recv_exit_status() returned %d', rc)
+        else:
+            logger.debug('channel.exit_status_ready() returned False')
         self.channel.close()
         self.client.close()
