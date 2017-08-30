@@ -35,9 +35,9 @@ def serial_expect_example(args):
     """
     logger.error('serial_example...')
     sexp = SerialExpect(args.serial_port, args.baud_rate)
-    idx = sexp.send_recv('\n', ['login:', '~]$'])
+    idx, output = sexp.send_recv('\n', ['login:', '~]$'])
     if idx == 0:
-        idx = sexp.send_recv(args.username + '\n', ['Password', '~]$'])
+        idx, output = sexp.send_recv(args.username + '\n', ['Password', '~]$'])
         if idx == 0:
             sexp.send_recv(args.password + '\n', ['~]$'])
     sexp.send_recv('/sbin/ls /l\n', ['~]$'])
